@@ -1,1 +1,240 @@
-body{margin:0;font-family:Arial;background:#f5f5f5;color:#222;}header.hero{background:#000;height:90vh;color:white;padding:40px;}ul{list-style:none;display:flex;gap:20px;}ul li a{color:white;text-decoration:none;}.btn{background:white;padding:10px 20px;color:black;border-radius:6px;}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}.card{background:white;padding:20px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.1);}.page{padding:60px;max-width:900px;margin:auto;}
+/* ORIGINAL STYLING - KEPT */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+    line-height: 1.6;
+}
+
+header.hero {
+    background: #000;
+    color: white;
+    padding: 40px;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+}
+
+ul li a:hover {
+    color: #ccc;
+}
+
+.btn {
+    background: white;
+    padding: 10px 20px;
+    color: black;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.hero-text {
+    margin-top: auto;
+    margin-bottom: 60px;
+    max-width: 700px;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    max-width: 600px;
+}
+
+.features {
+    padding: 80px 40px;
+    text-align: center;
+    background: white;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.page {
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: calc(100vh - 200px);
+}
+
+.page h1 {
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+}
+
+.gallery {
+    margin-top: 40px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.02);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+input, textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+button {
+    background: #000;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #222;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* MOBILE FIX - SIMPLE */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    ul {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    ul li {
+        width: 100%;
+    }
+    
+    ul li a {
+        display: block;
+        padding: 12px;
+        background: rgba(255,255,255,0.1);
+        border-radius: 6px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-text p {
+        font-size: 1.1rem;
+    }
+    
+    .features {
+        padding: 60px 20px;
+    }
+    
+    .page {
+        padding: 40px 20px;
+    }
+    
+    .page h1 {
+        font-size: 2.2rem;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .card {
+        padding: 20px;
+    }
+}
